@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  tomcat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: snb-tech/tomcat  
+    container_name: snb-tomcat-dev
+    ports:
+      - "80:8080"
+    volumes:
+      - smb_fr_service_data:/opt/bahrain-poc/resources
+      - ./logs:/logs
+    restart: always
+    environment:
+      - TZ=Asia/Kolkata
+networks:
+  default:
+    name: vms_net
+    external: true
+
+volumes:
+  smb_fr_service_data:
+    external: true

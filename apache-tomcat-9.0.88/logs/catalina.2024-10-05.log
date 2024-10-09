@@ -1,0 +1,309 @@
+05-Oct-2024 19:43:51.120 INFO [Catalina-utility-2] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/bahrain-poc]
+05-Oct-2024 19:44:01.142 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+05-Oct-2024 19:44:04.150 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Oct-2024 19:44:05.175 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Error deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:690)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:659)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+		at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1108)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1314)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1318)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1296)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/bahrain-poc]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:687)
+		... 24 more
+	Caused by: java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Failed to create parent directories for [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin/logs/app.log]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - openFile(logs/app.log,true) call failed. java.io.FileNotFoundException: logs/app.log (No such file or directory)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+		at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+		at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+		at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+		at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+		at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+		at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:175)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:155)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:97)
+		at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:174)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4901)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 25 more
+	Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Failed to create parent directories for [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin/logs/app.log]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - openFile(logs/app.log,true) call failed. java.io.FileNotFoundException: logs/app.log (No such file or directory)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:189)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:170)
+		at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+		at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+		... 46 more
+		Suppressed: java.io.FileNotFoundException: logs/app.log (No such file or directory)
+			at java.base/java.io.FileOutputStream.open0(Native Method)
+			at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+			at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+			at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+			at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+			at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+			at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+			at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+			at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+			at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+			at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+			at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+			at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:199)
+			at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:165)
+			... 50 more
+05-Oct-2024 19:44:05.176 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war] has finished in [4,033] ms
+05-Oct-2024 23:09:37.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.88
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 9 2024 13:22:30 UTC
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.88.0
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-196-generic
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk-amd64
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7-Ubuntu-1ubuntu220.04
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.852 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Oct-2024 23:09:37.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/conf/logging.properties
+05-Oct-2024 23:09:37.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Oct-2024 23:09:37.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms1024m
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx4096m
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+05-Oct-2024 23:09:37.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/temp
+05-Oct-2024 23:09:37.883 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+05-Oct-2024 23:09:38.501 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:09:38.539 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1012)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:578)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1068)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:686)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:268)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:223)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1359)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1372)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:654)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+		... 13 more
+05-Oct-2024 23:09:38.540 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1331] milliseconds
+05-Oct-2024 23:09:38.618 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Oct-2024 23:09:38.618 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.88]
+05-Oct-2024 23:09:38.645 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+05-Oct-2024 23:09:45.015 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Oct-2024 23:09:56.518 INFO [main] liquibase.database.null Set default schema name to public
+05-Oct-2024 23:09:57.320 INFO [main] liquibase.lockservice.null Waiting for changelog lock....
+05-Oct-2024 23:10:10.072 INFO [main] liquibase.lockservice.null Successfully acquired change log lock
+05-Oct-2024 23:10:10.850 INFO [main] liquibase.changelog.null Reading from public.databasechangelog
+05-Oct-2024 23:10:11.454 INFO [main] liquibase.command.null Using deploymentId: 8150011102
+05-Oct-2024 23:10:11.509 INFO [main] liquibase.changelog.null Reading from public.databasechangelog
+05-Oct-2024 23:10:18.579 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:18.635 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.49.sql::raw::includeAll ran successfully in 873ms
+05-Oct-2024 23:10:19.033 WARNING [main] liquibase.executor.null index "bahrain_traffic_details_traffic_detection_id_idx" does not exist, skipping
+05-Oct-2024 23:10:19.034 WARNING [main] liquibase.executor.null index "idx_bahrain_traffic_details_device_object_timestamp" does not exist, skipping
+05-Oct-2024 23:10:19.035 WARNING [main] liquibase.executor.null index "idx_bahrain_traffic_detections_device_object_detection_at" does not exist, skipping
+05-Oct-2024 23:10:19.035 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:19.091 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.50.sql::raw::includeAll ran successfully in 279ms
+05-Oct-2024 23:10:19.326 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:19.383 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.51.sql::raw::includeAll ran successfully in 175ms
+05-Oct-2024 23:10:19.506 INFO [main] liquibase.util.null UPDATE SUMMARY
+05-Oct-2024 23:10:19.507 INFO [main] liquibase.util.null Run:                          3
+05-Oct-2024 23:10:19.508 INFO [main] liquibase.util.null Previously run:              48
+05-Oct-2024 23:10:19.509 INFO [main] liquibase.util.null Filtered out:                 0
+05-Oct-2024 23:10:19.509 INFO [main] liquibase.util.null -------------------------------
+05-Oct-2024 23:10:19.511 INFO [main] liquibase.util.null Total change sets:           51
+
+05-Oct-2024 23:10:19.513 INFO [main] liquibase.util.null Update summary generated
+05-Oct-2024 23:10:19.514 INFO [main] liquibase.command.null Update command completed successfully.
+05-Oct-2024 23:10:19.685 INFO [main] liquibase.lockservice.null Successfully released change log lock
+05-Oct-2024 23:10:20.102 INFO [main] liquibase.lockservice.null Successfully released change log lock
+05-Oct-2024 23:10:20.157 INFO [main] liquibase.command.null Command execution complete
+05-Oct-2024 23:10:40.566 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war] has finished in [61,909] ms
+05-Oct-2024 23:10:40.572 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT_old]
+05-Oct-2024 23:10:40.629 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT_old] has finished in [57] ms
+05-Oct-2024 23:10:40.631 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT]
+05-Oct-2024 23:10:40.657 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT] has finished in [27] ms
+05-Oct-2024 23:10:40.659 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/manager]
+05-Oct-2024 23:10:40.722 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/manager] has finished in [64] ms
+05-Oct-2024 23:10:40.724 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/host-manager]
+05-Oct-2024 23:10:40.764 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/host-manager] has finished in [40] ms
+05-Oct-2024 23:10:40.764 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/examples]
+05-Oct-2024 23:10:41.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/examples] has finished in [245] ms
+05-Oct-2024 23:10:41.012 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/docs]
+05-Oct-2024 23:10:41.037 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/docs] has finished in [25] ms
+05-Oct-2024 23:10:41.056 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [62516] milliseconds
+05-Oct-2024 23:10:41.057 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:591)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:825)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:773)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+05-Oct-2024 23:10:41.059 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:10:41.063 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+05-Oct-2024 23:10:43.145 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:10:43.147 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:56:56.399 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/bahrain-poc]
+05-Oct-2024 23:56:56.494 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+05-Oct-2024 23:56:59.093 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+05-Oct-2024 23:57:00.374 SEVERE [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Error deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:690)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:659)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+		at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1108)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1314)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1318)
+		at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1296)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+		at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/bahrain-poc]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:687)
+		... 24 more
+	Caused by: java.lang.IllegalStateException: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Failed to create parent directories for [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin/logs/app.log]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - openFile(logs/app.log,true) call failed. java.io.FileNotFoundException: logs/app.log (No such file or directory)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:344)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:298)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:246)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:223)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143)
+		at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131)
+		at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85)
+		at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66)
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+		at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120)
+		at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114)
+		at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65)
+		at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:343)
+		at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.run(SpringBootServletInitializer.java:175)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.createRootApplicationContext(SpringBootServletInitializer.java:155)
+		at org.springframework.boot.web.servlet.support.SpringBootServletInitializer.onStartup(SpringBootServletInitializer.java:97)
+		at org.springframework.web.SpringServletContainerInitializer.onStartup(SpringServletContainerInitializer.java:174)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4901)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 25 more
+	Caused by: java.lang.IllegalStateException: Logback configuration error detected: 
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - Failed to create parent directories for [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin/logs/app.log]
+ERROR in ch.qos.logback.core.rolling.RollingFileAppender[ROLLING] - openFile(logs/app.log,true) call failed. java.io.FileNotFoundException: logs/app.log (No such file or directory)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.reportConfigurationErrorsIfNecessary(LogbackLoggingSystem.java:189)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:170)
+		at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithConventions(AbstractLoggingSystem.java:80)
+		at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:60)
+		at org.springframework.boot.logging.logback.LogbackLoggingSystem.initialize(LogbackLoggingSystem.java:132)
+		at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:329)
+		... 46 more
+		Suppressed: java.io.FileNotFoundException: logs/app.log (No such file or directory)
+			at java.base/java.io.FileOutputStream.open0(Native Method)
+			at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+			at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+			at ch.qos.logback.core.recovery.ResilientFileOutputStream.<init>(ResilientFileOutputStream.java:26)
+			at ch.qos.logback.core.FileAppender.openFile(FileAppender.java:204)
+			at ch.qos.logback.core.FileAppender.start(FileAppender.java:127)
+			at ch.qos.logback.core.rolling.RollingFileAppender.start(RollingFileAppender.java:100)
+			at ch.qos.logback.core.joran.action.AppenderAction.end(AppenderAction.java:90)
+			at ch.qos.logback.core.joran.spi.Interpreter.callEndAction(Interpreter.java:309)
+			at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:193)
+			at ch.qos.logback.core.joran.spi.Interpreter.endElement(Interpreter.java:179)
+			at ch.qos.logback.core.joran.spi.EventPlayer.play(EventPlayer.java:62)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:165)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:152)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:110)
+			at ch.qos.logback.core.joran.GenericConfigurator.doConfigure(GenericConfigurator.java:53)
+			at org.springframework.boot.logging.logback.LogbackLoggingSystem.configureByResourceUrl(LogbackLoggingSystem.java:199)
+			at org.springframework.boot.logging.logback.LogbackLoggingSystem.loadConfiguration(LogbackLoggingSystem.java:165)
+			... 50 more
+05-Oct-2024 23:57:00.381 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war] has finished in [3,882] ms

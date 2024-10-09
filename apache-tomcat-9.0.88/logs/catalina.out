@@ -1,0 +1,201 @@
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Oct-2024 23:09:37.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.88
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Apr 9 2024 13:22:30 UTC
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.88.0
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.4.0-196-generic
+05-Oct-2024 23:09:37.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk-amd64
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.12+7-Ubuntu-1ubuntu220.04
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Ubuntu
+05-Oct-2024 23:09:37.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.852 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.873 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+05-Oct-2024 23:09:37.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+05-Oct-2024 23:09:37.875 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/conf/logging.properties
+05-Oct-2024 23:09:37.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Oct-2024 23:09:37.876 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms1024m
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx4096m
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Oct-2024 23:09:37.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+05-Oct-2024 23:09:37.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88
+05-Oct-2024 23:09:37.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/temp
+05-Oct-2024 23:09:37.883 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+05-Oct-2024 23:09:38.501 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:09:38.539 SEVERE [main] org.apache.catalina.util.LifecycleBase.handleSubClassException Failed to initialize component [Connector["http-nio-8080"]]
+	org.apache.catalina.LifecycleException: Protocol handler initialization failed
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1012)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardService.initInternal(StandardService.java:578)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:1068)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:127)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:686)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:709)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:302)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:472)
+	Caused by: java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337)
+		at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294)
+		at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:268)
+		at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:223)
+		at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1359)
+		at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1372)
+		at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:654)
+		at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:75)
+		at org.apache.catalina.connector.Connector.initInternal(Connector.java:1010)
+		... 13 more
+05-Oct-2024 23:09:38.540 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1331] milliseconds
+05-Oct-2024 23:09:38.618 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+05-Oct-2024 23:09:38.618 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.88]
+05-Oct-2024 23:09:38.645 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war]
+05-Oct-2024 23:09:45.015 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.15)
+
+2024-10-05 23:09:46.977 [main] INFO  i.t.b.poc.BahrainPocApplication - Starting BahrainPocApplication using Java 17.0.12 on bahrain-dev with PID 3083161 (/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc/WEB-INF/classes started by bahrain in /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin)
+[StartupInfoLogger.java:55] [org.springframework.boot.StartupInfoLogger]
+2024-10-05 23:09:46.990 [main] INFO  i.t.b.poc.BahrainPocApplication - No active profile set, falling back to 1 default profile: "default"
+[SpringApplication.java:631] [org.springframework.boot.SpringApplication]
+2024-10-05 23:09:53.879 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[HikariDataSource.java:80] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:54.766 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[HikariDataSource.java:82] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:54.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[HikariDataSource.java:80] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:55.384 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[HikariDataSource.java:82] [com.zaxxer.hikari.HikariDataSource]
+05-Oct-2024 23:09:56.518 INFO [main] liquibase.database.null Set default schema name to public
+05-Oct-2024 23:09:57.320 INFO [main] liquibase.lockservice.null Waiting for changelog lock....
+05-Oct-2024 23:10:10.072 INFO [main] liquibase.lockservice.null Successfully acquired change log lock
+05-Oct-2024 23:10:10.850 INFO [main] liquibase.changelog.null Reading from public.databasechangelog
+05-Oct-2024 23:10:11.454 INFO [main] liquibase.command.null Using deploymentId: 8150011102
+05-Oct-2024 23:10:11.509 INFO [main] liquibase.changelog.null Reading from public.databasechangelog
+Running Changeset: /db.changelog/changelog-0.0.49.sql::raw::includeAll
+05-Oct-2024 23:10:18.579 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:18.635 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.49.sql::raw::includeAll ran successfully in 873ms
+Running Changeset: /db.changelog/changelog-0.0.50.sql::raw::includeAll
+05-Oct-2024 23:10:19.033 WARNING [main] liquibase.executor.null index "bahrain_traffic_details_traffic_detection_id_idx" does not exist, skipping
+05-Oct-2024 23:10:19.034 WARNING [main] liquibase.executor.null index "idx_bahrain_traffic_details_device_object_timestamp" does not exist, skipping
+05-Oct-2024 23:10:19.035 WARNING [main] liquibase.executor.null index "idx_bahrain_traffic_detections_device_object_detection_at" does not exist, skipping
+05-Oct-2024 23:10:19.035 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:19.091 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.50.sql::raw::includeAll ran successfully in 279ms
+Running Changeset: /db.changelog/changelog-0.0.51.sql::raw::includeAll
+05-Oct-2024 23:10:19.326 INFO [main] liquibase.changelog.null Custom SQL executed
+05-Oct-2024 23:10:19.383 INFO [main] liquibase.changelog.null ChangeSet /db.changelog/changelog-0.0.51.sql::raw::includeAll ran successfully in 175ms
+05-Oct-2024 23:10:19.506 INFO [main] liquibase.util.null UPDATE SUMMARY
+05-Oct-2024 23:10:19.507 INFO [main] liquibase.util.null Run:                          3
+05-Oct-2024 23:10:19.508 INFO [main] liquibase.util.null Previously run:              48
+05-Oct-2024 23:10:19.509 INFO [main] liquibase.util.null Filtered out:                 0
+05-Oct-2024 23:10:19.509 INFO [main] liquibase.util.null -------------------------------
+05-Oct-2024 23:10:19.511 INFO [main] liquibase.util.null Total change sets:           51
+
+
+UPDATE SUMMARY
+Run:                          3
+Previously run:              48
+Filtered out:                 0
+-------------------------------
+Total change sets:           51
+
+05-Oct-2024 23:10:19.513 INFO [main] liquibase.util.null Update summary generated
+05-Oct-2024 23:10:19.514 INFO [main] liquibase.command.null Update command completed successfully.
+Liquibase: Update has been successful.
+05-Oct-2024 23:10:19.685 INFO [main] liquibase.lockservice.null Successfully released change log lock
+05-Oct-2024 23:10:20.102 INFO [main] liquibase.lockservice.null Successfully released change log lock
+05-Oct-2024 23:10:20.157 INFO [main] liquibase.command.null Command execution complete
+2024-10-05 23:10:35.629 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [103.73.188.228:45701]
+[AbstractConnectionFactory.java:639] [org.springframework.amqp.rabbit.connection.AbstractConnectionFactory]
+2024-10-05 23:10:36.024 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#21e52195:0/SimpleConnection@241f4260 [delegate=amqp://user@103.73.188.228:45701/, localPort= 35432]
+[AbstractConnectionFactory.java:590] [org.springframework.amqp.rabbit.connection.AbstractConnectionFactory]
+2024-10-05 23:10:40.475 [main] INFO  i.t.b.poc.BahrainPocApplication - Started BahrainPocApplication in 55.009 seconds (JVM running for 63.711)
+[StartupInfoLogger.java:61] [org.springframework.boot.StartupInfoLogger]
+05-Oct-2024 23:10:40.566 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc.war] has finished in [61,909] ms
+05-Oct-2024 23:10:40.572 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT_old]
+05-Oct-2024 23:10:40.629 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT_old] has finished in [57] ms
+05-Oct-2024 23:10:40.631 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT]
+05-Oct-2024 23:10:40.657 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/ROOT] has finished in [27] ms
+05-Oct-2024 23:10:40.659 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/manager]
+05-Oct-2024 23:10:40.722 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/manager] has finished in [64] ms
+05-Oct-2024 23:10:40.724 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/host-manager]
+05-Oct-2024 23:10:40.764 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/host-manager] has finished in [40] ms
+05-Oct-2024 23:10:40.764 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/examples]
+05-Oct-2024 23:10:41.011 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/examples] has finished in [245] ms
+05-Oct-2024 23:10:41.012 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/docs]
+05-Oct-2024 23:10:41.037 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/docs] has finished in [25] ms
+05-Oct-2024 23:10:41.056 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [62516] milliseconds
+05-Oct-2024 23:10:41.057 SEVERE [main] org.apache.catalina.core.StandardServer.await Failed to create server shutdown socket on address [localhost] and port [8005] (base port [8005] and offset [0])
+	java.net.BindException: Address already in use
+		at java.base/sun.nio.ch.Net.bind0(Native Method)
+		at java.base/sun.nio.ch.Net.bind(Net.java:555)
+		at java.base/sun.nio.ch.Net.bind(Net.java:544)
+		at java.base/sun.nio.ch.NioSocketImpl.bind(NioSocketImpl.java:648)
+		at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+		at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+		at org.apache.catalina.core.StandardServer.await(StandardServer.java:591)
+		at org.apache.catalina.startup.Catalina.await(Catalina.java:825)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:773)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:473)
+05-Oct-2024 23:10:41.059 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:10:41.063 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+2024-10-05 23:10:41.759 [container-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.811 [container-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.812 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.867 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.921 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.979 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.035 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.071 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.086 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.195 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.353 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.477 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.635 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.914 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:43.097 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[HikariDataSource.java:350] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.104 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[HikariDataSource.java:352] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.105 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[HikariDataSource.java:350] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.109 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[HikariDataSource.java:352] [com.zaxxer.hikari.HikariDataSource]
+05-Oct-2024 23:10:43.145 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+05-Oct-2024 23:10:43.147 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

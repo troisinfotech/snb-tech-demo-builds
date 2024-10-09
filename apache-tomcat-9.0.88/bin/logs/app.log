@@ -1,0 +1,54 @@
+2024-10-05 23:09:46.977 [main] INFO  i.t.b.poc.BahrainPocApplication - Starting BahrainPocApplication using Java 17.0.12 on bahrain-dev with PID 3083161 (/opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/webapps/bahrain-poc/WEB-INF/classes started by bahrain in /opt/deployments/bahrain-poc-builds/apache-tomcat-9.0.88/bin)
+[StartupInfoLogger.java:55] [org.springframework.boot.StartupInfoLogger]
+2024-10-05 23:09:46.990 [main] INFO  i.t.b.poc.BahrainPocApplication - No active profile set, falling back to 1 default profile: "default"
+[SpringApplication.java:631] [org.springframework.boot.SpringApplication]
+2024-10-05 23:09:53.879 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[HikariDataSource.java:80] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:54.766 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[HikariDataSource.java:82] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:54.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+[HikariDataSource.java:80] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:09:55.384 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+[HikariDataSource.java:82] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:35.629 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [103.73.188.228:45701]
+[AbstractConnectionFactory.java:639] [org.springframework.amqp.rabbit.connection.AbstractConnectionFactory]
+2024-10-05 23:10:36.024 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#21e52195:0/SimpleConnection@241f4260 [delegate=amqp://user@103.73.188.228:45701/, localPort= 35432]
+[AbstractConnectionFactory.java:590] [org.springframework.amqp.rabbit.connection.AbstractConnectionFactory]
+2024-10-05 23:10:40.475 [main] INFO  i.t.b.poc.BahrainPocApplication - Started BahrainPocApplication in 55.009 seconds (JVM running for 63.711)
+[StartupInfoLogger.java:61] [org.springframework.boot.StartupInfoLogger]
+2024-10-05 23:10:41.759 [container-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.811 [container-11] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.812 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.867 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.921 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:41.979 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.035 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.071 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.086 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+[SimpleMessageListenerContainer.java:645] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.195 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#4-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.353 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.477 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#5-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.635 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#2-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:42.914 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#3-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+[SimpleMessageListenerContainer.java:649] [org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer]
+2024-10-05 23:10:43.097 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+[HikariDataSource.java:350] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.104 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+[HikariDataSource.java:352] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.105 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[HikariDataSource.java:350] [com.zaxxer.hikari.HikariDataSource]
+2024-10-05 23:10:43.109 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[HikariDataSource.java:352] [com.zaxxer.hikari.HikariDataSource]
